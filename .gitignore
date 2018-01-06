@@ -4,6 +4,7 @@
 **/temp
 **/public/logs/**
 .idea
+*.iml
 .project
 /cc_summaries
 keyValStore*
