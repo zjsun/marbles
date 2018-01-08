@@ -432,7 +432,7 @@ module.exports = function (config_filename, logger) {
 		// copy over private and public keys to the hfc key value store
 		function copy_keys_over(custom_path) {
 			try {
-				const default_path2 = path.join(os.homedir(), '.hfc-key-store/');
+				const default_path2 = path.join(os.homedir(), '.hfc-key-store/'); //todo create this dir if not exists
 				const private_key = 'cd96d5260ad4757551ed4a5a991e62130f8008a0bf996e4e4b84cd097a747fec-priv';	//todo make this generic
 				const public_key = 'cd96d5260ad4757551ed4a5a991e62130f8008a0bf996e4e4b84cd097a747fec-pub';
 				fs.createReadStream(custom_path + private_key).pipe(fs.createWriteStream(default_path2 + private_key));
